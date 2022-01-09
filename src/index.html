@@ -93,6 +93,7 @@
         <div class="col-12 col-md-4 offset-md-4 my-4 ">
           <label for="your-name" class="text-light">SuperStar Name</label>
           <input
+
             type="text"
             id="your-name"
             class="form-control rounded-0"
@@ -102,6 +103,7 @@
 
         <div class="col-12 col-md-4 offset-md-4 my-4">
           <button
+          onclick="handleClick()"
             id="create-room"
             class="btn btn-block rounded-0 btn-warning text-black"
           >
@@ -141,6 +143,7 @@
 
         <div class="col-12 col-md-4 offset-md-4 my-4">
           <button
+          onclick="handleClick2()"
             id="enter-room"
             class="btn btn-block rounded-0 btn-warning fw-bold"
           >
@@ -156,11 +159,15 @@
       </div>
 
       <div class="container row">
-        <div class="col-md-12 mt-3 mb-3 main">
+        <div class="col-md-12 mt-3 mb-3 main ">
           <div class="row" id="videos"></div>
         </div>
       </div>
+      
 
+
+
+      
 
       <!--  <div class="container row  p-2 d-flex justify-content-center">
 <div class="all-content">
@@ -193,6 +200,19 @@
       </div>  -->
     </div>
     <script>
+      var arr=[];
+     
+      function handleClick(){
+      
+        // alert(document.getElementById('your-name').value);
+        arr.push(document.getElementById('your-name').value);
+        console.log(arr);
+      }
+      function handleClick2(){
+        arr.push(document.getElementById('username').value);
+       
+      }
+   
       function startTimer(duration, display) {
       var timer = duration, minutes, seconds;
       setInterval(function () {
