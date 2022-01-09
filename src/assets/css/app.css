@@ -176,3 +176,6 @@
     padding: 6px;
     margin-left: 100px
   }
+  #textToCopy{
+      font-size: 0px;
+  }
